@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 type Result<T> = std::result::Result<T, Box<dyn ::std::error::Error>>;
 
@@ -35,7 +35,7 @@ fn duplicate_files(paths: Vec<PathBuf>) -> Vec<Vec<String>> {
         .collect()
 }
 
-fn md5_of_file(path: &PathBuf) -> Result<String> {
+fn md5_of_file(path: &Path) -> Result<String> {
     let contents = std::fs::read_to_string(path)?;
     Ok(format!("{:x}", md5::compute(contents)))
 }
