@@ -1,6 +1,6 @@
 [package]
 name = "dupfinder"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Chris Davison <c.jr.davison@gmail.com>"]
 edition = "2018"
 
@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 md5 = "0.7.0"
+rayon = "1.5.0"
